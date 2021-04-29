@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "tsc --project ./",
-    "clean": "rm -rf dist"
+    "build": "cd client && npm run build"
   },
   "keywords": [],
   "author": "",
