@@ -4,20 +4,20 @@
 		{
 			"type": "npm",
 			"script": "build",
-			"path": "backend/",
+			"path": "./",
 			"group": "build",
 			"problemMatcher": [],
-			"label": "npm: build - backend",
-			"detail": "tsc --project ./"
+			"label": "npm: build",
+			"detail": "build project"
 		},
 		{
 			"type": "npm",
-			"script": "start",
-			"path": "backend/",
+			"script": "clean",
+			"path": "./",
 			"group": "build",
 			"problemMatcher": [],
-			"label": "npm: start - backend",
-			"detail": "nodemon src/app.ts"
+			"label": "npm: clean",
+			"detail": "clean dist"
 		}
 	]
 }
