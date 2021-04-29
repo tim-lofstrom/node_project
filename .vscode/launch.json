@@ -5,7 +5,7 @@
         "type": "node",
         "request": "launch",
         "name": "nodemon",
-        "runtimeExecutable": "nodemon",
+        "runtimeExecutable": "node_modules/nodemon/bin/nodemon.js",
         "program": "${file}",
         "restart": true,
         "console": "integratedTerminal",
