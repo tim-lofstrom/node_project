@@ -3,21 +3,19 @@
 	"tasks": [
 		{
 			"type": "npm",
-			"script": "build",
-			"path": "./",
+			"script": "client:build",
 			"group": "build",
 			"problemMatcher": [],
-			"label": "npm: build",
-			"detail": "build project"
+			"label": "npm: build client",
+			"detail": "Build the client application"
 		},
 		{
 			"type": "npm",
-			"script": "clean",
-			"path": "./",
+			"script": "server:build",
 			"group": "build",
 			"problemMatcher": [],
-			"label": "npm: clean",
-			"detail": "clean dist"
+			"label": "npm: build server",
+			"detail": "Build the server application"
 		}
 	]
 }
