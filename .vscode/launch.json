@@ -4,9 +4,9 @@
     {
         "type": "node",
         "request": "launch",
-        "name": "nodemon",
-        "runtimeExecutable": "node_modules/nodemon/bin/nodemon.js",
-        "program": "${file}",
+        "name": "ts-node-dev",
+        "runtimeExecutable": "npx",
+        "args": ["tsnd", "--respawn", "${file}"],
         "restart": true,
         "console": "integratedTerminal",
         "internalConsoleOptions": "neverOpen"
