@@ -4,6 +4,9 @@
   "description": "",
   "scripts": {
     "start": "node dist/server.js",
+    "install:all": "npm install",
+    "install:client": "cd client && npm install",
+    "install:server": "cd server && npm install",
     "build:all": "run-p build:client build:server",
     "build:client": "cd client && npm run build",
     "build:server": "cd server && npm run build",
@@ -14,10 +17,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "server": "file:server",
-    "client": "file:client"
-  },
   "devDependencies": {
     "npm-run-all": "^4.0.2"
   }
