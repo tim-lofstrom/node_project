@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "start": "cd dist && node server.js",
+    "install": "run-p install:client install:server",
     "install:all": "npm install",
     "install:client": "cd client && npm install",
     "install:server": "cd server && npm install",
