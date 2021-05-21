@@ -9,6 +9,6 @@ export class AppComponent {
   title = 'client';
 
   click(){
-    console.log("ASD");
+    console.log("Test");
   }
 }
