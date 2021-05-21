@@ -13,7 +13,7 @@
     "build:client": "cd client && npm run build",
     "build:server": "cd server && npm run build",
     "build:clean": "rm -rf dist",
-    "clean": "npm run clean:dist; npm run clean:modules"
+    "clean": "npm run build:clean; npm run install:clean"
   },
   "keywords": [],
   "author": "",
