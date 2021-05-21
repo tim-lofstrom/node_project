@@ -3,17 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "cd dist && node server.js",
+    "start:dist": "cd dist && node server.js",
     "install": "run-p install:client install:server",
     "install:all": "npm install",
     "install:client": "cd client && npm install",
     "install:server": "cd server && npm install",
+    "install:clean": "rm -rf **/node_modules; rm -rf node_modules",
     "build:all": "run-p build:client build:server",
     "build:client": "cd client && npm run build",
     "build:server": "cd server && npm run build",
-    "clean": "npm run clean:dist; npm run clean:modules",
-    "clean:dist": "rm -rf dist",
-    "clean:modules": "rm -rf **/node_modules; rm -rf node_modules"
+    "build:clean": "rm -rf dist",
+    "clean": "npm run clean:dist; npm run clean:modules"
   },
   "keywords": [],
   "author": "",
