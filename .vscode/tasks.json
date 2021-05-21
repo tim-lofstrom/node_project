@@ -2,8 +2,40 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
+			"type": "shell",
+			"command": "npm install",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: install client",
+			"detail": "Npm install client application",
+			"options": {
+				"cwd": "client"
+			}
+		},
+		{
+			"type": "shell",
+			"command": "npm install",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: install server",
+			"detail": "Npm install server application",
+			"options": {
+				"cwd": "server"
+			}
+		},
+		{
+			"group": "build",
+			"label": "npm: install all",
+			"detail": "Npm install Client and Server",
+			"dependsOn": [
+				"npm: install client",
+				"npm: install server"
+			],
+			"problemMatcher": []
+		},
+		{
 			"type": "npm",
-			"script": "client:build",
+			"script": "build:client",
 			"group": "build",
 			"problemMatcher": [],
 			"label": "npm: build client",
@@ -11,7 +43,7 @@
 		},
 		{
 			"type": "npm",
-			"script": "server:build",
+			"script": "build:server",
 			"group": "build",
 			"problemMatcher": [],
 			"label": "npm: build server",
@@ -21,7 +53,39 @@
 			"group": "build",
 			"label": "npm: build all",
 			"detail": "Build Client and Server",
-			"dependsOn": ["npm: build client", "npm: build server"]
-		}
+			"dependsOn": [
+				"npm: install all",
+				"npm: build client",
+				"npm: build server"
+			],
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"command": "find . -name \"node_modules\" -type d -exec rm -rf '{}' +",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "clean: node_modules",
+			"detail": "Clean node_modules recursive",
+		},
+		{
+			"type": "shell",
+			"command": "rm -rf dist",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "clean: dist",
+			"detail": "Clean dist folder",
+		},
+		{
+			"group": "build",
+			"label": "Clean: all",
+			"detail": "Clean all",
+			"dependsOn": [
+				"clean: node_modules",
+				"clean: dist"
+			],
+			"problemMatcher": []
+		},
+
 	]
 }

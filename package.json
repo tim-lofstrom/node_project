@@ -5,15 +5,11 @@
   "scripts": {
     "start:dist": "cd dist && node server.js",
     "install": "run-p install:client install:server",
-    "install:all": "npm install",
     "install:client": "cd client && npm install",
     "install:server": "cd server && npm install",
-    "install:clean": "rm -rf **/node_modules; rm -rf node_modules",
     "build:all": "run-p build:client build:server",
     "build:client": "cd client && npm run build",
-    "build:server": "cd server && npm run build",
-    "build:clean": "rm -rf dist",
-    "clean": "npm run build:clean; npm run install:clean"
+    "build:server": "cd server && npm run build"
   },
   "keywords": [],
   "author": "",
