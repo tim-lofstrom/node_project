@@ -9,6 +9,7 @@
         "args": ["tsnd", "--respawn", "${file}"],
         "restart": true,
         "console": "integratedTerminal",
-        "internalConsoleOptions": "neverOpen"
+        "internalConsoleOptions": "neverOpen",
+        "cwd": "server"
     }]
 }
