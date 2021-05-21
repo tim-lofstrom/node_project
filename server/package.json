@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "build": "tsc --build",
+    "postbuild": "cp package.json ../dist/package.json && cd ../dist && npm install --only=production",
     "start": "npx tsnd --respawn src/server.ts"
   },
   "keywords": [],

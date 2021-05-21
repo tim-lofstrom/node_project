@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "node dist/server.js",
+    "start": "cd dist && node server.js",
     "install:all": "npm install",
     "install:client": "cd client && npm install",
     "install:server": "cd server && npm install",
     "build:all": "run-p build:client build:server",
     "build:client": "cd client && npm run build",
     "build:server": "cd server && npm run build",
-    "clean": "run-p clean:dist clean:modules",
+    "clean": "npm run clean:dist; npm run clean:modules",
     "clean:dist": "rm -rf dist",
     "clean:modules": "rm -rf **/node_modules; rm -rf node_modules"
   },
