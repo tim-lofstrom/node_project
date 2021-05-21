@@ -4,7 +4,7 @@
     {
         "type": "node",
         "request": "launch",
-        "name": "ts-node-dev",
+        "name": "Server",
         "runtimeExecutable": "npx",
         "args": ["tsnd", "--respawn", "${file}"],
         "restart": true,
