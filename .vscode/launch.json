@@ -1,15 +1,34 @@
 {
     "version": "0.2.0",
     "configurations": [
-    {
-        "type": "node",
-        "request": "launch",
-        "name": "Server",
-        "runtimeExecutable": "npx",
-        "args": ["tsnd", "--respawn", "${file}"],
-        "restart": true,
-        "console": "integratedTerminal",
-        "internalConsoleOptions": "neverOpen",
-        "cwd": "server"
-    }]
+        {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "pwa-chrome",
+            "url": "http://localhost:4200",
+            "webRoot": "${workspaceFolder}/client"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Server and Client (Dist)",
+            "runtimeExecutable": "node",
+            "args": ["server.js"],
+            "restart": true,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "cwd": "dist"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Server (Debug)",
+            "runtimeExecutable": "npx",
+            "args": ["tsnd", "--respawn", "src/server.ts"],
+            "restart": true,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "cwd": "server"
+        }
+    ]
 }

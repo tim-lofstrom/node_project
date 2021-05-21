@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start:dist": "cd dist && node server.js",
     "install": "run-p install:client install:server",
     "install:client": "cd client && npm install",
     "install:server": "cd server && npm install",

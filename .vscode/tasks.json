@@ -54,9 +54,8 @@
 			"label": "npm: build all",
 			"detail": "Build Client and Server",
 			"dependsOn": [
-				"npm: install all",
 				"npm: build client",
-				"npm: build server"
+				"npm: build server",
 			],
 			"problemMatcher": []
 		},
@@ -86,6 +85,16 @@
 			],
 			"problemMatcher": []
 		},
-
+		{
+			"type": "npm",
+			"script": "start",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: start client",
+			"detail": "Start the client application (ng serve)",
+			"options": {
+				"cwd": "client"
+			}
+		},
 	]
 }
