@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "tsc --build",
-    "start": ""
+    "start": "npx tsnd --respawn src/server.ts"
   },
   "keywords": [],
   "author": "",

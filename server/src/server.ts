@@ -6,7 +6,7 @@ const port = 3000;
 app.use('/', express.static('dist/public'));
 
 app.use('/api', (req, res) => {
-    res.send("Hello!!!");
+    res.send("Hello!!!!!");
 });
 
 app.listen(port, () => {
