@@ -5,7 +5,8 @@
   "scripts": {
     "install:client": "cd client && npm install",
     "install:server": "cd server && npm install",
-    "clean": "rm -rf dist"
+    "clean:dist": "rm -rf dist",
+    "clean:modules": "rm -rf **/node_modules"
   },
   "keywords": [],
   "author": "",
